@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Viewer</title>
+	</head>
+	<body>
+		<html>
+	<head>
+	<title>Xiaoyu Studio</title>
+	<link rel="icon" type="image/x-icon" href="https://www.xiaoyustudio.com/LOGO_50px.png" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+	</head>
+	<body>
+		<div id = "header",style="height:500px">
+			<div id = "a" ,style = "backgroud-color:#FFA500;">
+				<h1 style="margin-bottom:0;">
+					<a href="index.html">
+                        <img src="./LOGO.png" width="180px" height="50px"></a>
+                        
+                        XiaoyuStudio
+				</h1>
+				<hr>
+				
+			<div id="menu" style="background-color:#FFD700;width:200px;height:200px;float:left;">
+			<b><font size="13">菜单</font></b><br>
+			<a href="https://www.xiaoyustudio.com"><h3>返回主页</h3></a>
+			
+			</div>
+			
+			<h1>主要内容</h1>
+			<script type="text/javascript">
+			function GetQueryString(name)
+			{
+     			var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     			var r = window.location.search.substr(1).match(reg);
+     			if(r!=null)return  unescape(r[2]); return null;
+			}
+			var abc = GetQueryString("page");
+			var w =  abc + '.html'
+			var txtttt = "<p>当前文件：" + w+"</p>"
+			document.write(txtttt)
+			var wew = '<iframe name="footer" marginwidth=0 marginheight=0 width=70% height=100% src="' + w+ '" frameborder=0></iframe>'
+			document.write(wew)
+			console.log(w)
+			
+			
+			</script>
+		
+		
+	
+	</body>
+	
+</html>
+		
+		
+		
+		
