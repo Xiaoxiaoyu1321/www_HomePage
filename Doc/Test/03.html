@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>文件列表</title>
+  <script>
+    function getFiles() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", ".", true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var fileList = xhr.responseText.split('\n');
+          var fileContainer = document.getElementById("fileContainer");
+          for (var i = 0; i < fileList.length; i++) {
+            var file = fileList[i];
+            var fileLink = document.createElement("a");
+            fileLink.href = file;
+            fileLink.innerHTML = file;
+            fileContainer.appendChild(fileLink);
+            fileContainer.appendChild(document.createElement("br"));
+          }
+        }
+      };
+      xhr.send();
+    }
+  </script>
+</head>
+<body onload="getFiles()">
+  <h1>文件列表</h1>
+  <div id="fileContainer"></div>
+</body>
+</html>
