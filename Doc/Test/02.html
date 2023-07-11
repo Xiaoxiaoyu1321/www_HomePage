@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // 在窗口加载完成后执行
+    window.addEventListener("load", function() {
+      // 获取User-Agent
+      var userAgent = navigator.userAgent;
+      
+      // 设置h1标签的文本内容为User-Agent
+      document.querySelector("h1").textContent = userAgent;
+    });
+  </script>
+</head>
+<body>
+  <!-- 插入h1标签 -->
+  <h1></h1>
+</body>
+</html>
